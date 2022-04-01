@@ -12,6 +12,9 @@ antigen theme ys
 
 antigen apply
 
+alias sp='export ALL_PROXY="socks5://127.0.0.1:10808"'
+alias op='export ALL_PROXY=""'
+
 export PATH=$HOME/.local/bin:$PATH
 
 # go

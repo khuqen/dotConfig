@@ -7,6 +7,11 @@ local opts = {
             completeUnimported = true,
         },
     },
+    on_attach = function(client)
+        -- 禁用格式化功能，交给专门插件插件处理
+        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
+    end,
 }
 
 return {

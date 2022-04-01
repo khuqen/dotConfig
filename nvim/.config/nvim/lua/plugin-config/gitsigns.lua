@@ -36,7 +36,7 @@ gs.setup({
         ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
         ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line()<CR>',
     },
-    watch_index = { interval = 1000 },
+    watch_gitdir = { interval = 1000 },
     sign_priority = 6,
     status_formatter = nil, -- Use default
 })

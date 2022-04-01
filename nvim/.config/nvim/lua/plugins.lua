@@ -11,12 +11,17 @@ packer.startup({
         -- lualine
         use({ 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' })
         use('arkav/lualine-lsp-progress')
+        -- neoscroll
+        use({
+            'karb94/neoscroll.nvim',
+            config = function()
+                require('neoscroll').setup()
+            end,
+        })
         -- telescope
         use({ 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' })
         -- dashboard-nvim
         use('glepnir/dashboard-nvim')
-        -- project
-        use('ahmedkhalf/project.nvim')
         -- treesitter
         use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
         -- Comment
@@ -25,6 +30,10 @@ packer.startup({
         use('windwp/nvim-autopairs')
         -- gitsigns
         use('lewis6991/gitsigns.nvim')
+        -- diffview
+        use('sindrets/diffview.nvim')
+        -- fugitive
+        use('tpope/vim-fugitive')
         -- todo
         use({
             'folke/todo-comments.nvim',
@@ -32,6 +41,8 @@ packer.startup({
                 require('todo-comments').setup({})
             end,
         })
+        -- indent-blankline
+        use('lukas-reineke/indent-blankline.nvim')
         --------------------- LSP --------------------
         -- lspconfig
         use({ 'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer' })
@@ -50,9 +61,8 @@ packer.startup({
         -- ui
         use('onsails/lspkind-nvim')
         use('tami5/lspsaga.nvim')
-        -- format
-        -- use("sbdchd/neoformat")
-        use('mhartington/formatter.nvim')
+        -- null-ls
+        use({ 'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim' })
         --------------------- colorschemes --------------------
         -- tokyonight
         use('folke/tokyonight.nvim')

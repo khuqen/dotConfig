@@ -6,10 +6,10 @@ local lsp_installer = require('nvim-lsp-installer')
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
     sumneko_lua = require('lsp.config.lua'), -- lua/lsp/config/lua.lua
-    gopls = { 'lsp.config.go' },
+    gopls = require('lsp.config.go'),
+    pyright = require('lsp.config.python'),
     jsonls = {},
     yamlls = {},
-    pyright = {},
     html = {},
     ccls = {},
 }

@@ -32,7 +32,7 @@ vim.o.smartindent = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 -- 搜索不要高亮
-vim.o.hlsearch = false
+-- vim.o.hlsearch = false
 -- 边输入边搜索
 vim.o.incsearch = true
 -- 命令行高为2，提供足够的显示空间
@@ -66,7 +66,7 @@ vim.o.background = 'dark'
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 不可见字符的显示，这里只把空格显示为一个点
--- vim.o.listchars = "space:·"
+-- vim.o.listchars = "space:·,tab:··"
 -- vim.o.list = true
 -- 补全增强
 vim.o.wildmenu = true
@@ -78,3 +78,5 @@ vim.o.pumheight = 10
 vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
+-- 剪切板
+vim.opt.clipboard = 'unnamedplus'
